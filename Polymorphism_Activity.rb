@@ -1,22 +1,23 @@
-class Car
-    def speak
-      raise NotImplementedError, "Subclasses must implement the 'speak' method."
+class Supra
+    def rev
+      "henggg stu-tu-tu!"
     end
   end
   
-  class Supra < Car
+  class Mustang
     def rev
-      "nggg stututu!"
+      "Vroom-vroom!"
     end
   end
   
-  class Mustang < Car
-    def rev
-      "vroom vroom!"
-    end
+  # Duck typing function
+  def rev_sound(car)
+    car.rev
   end
+  
+  # Create objects and demonstrate polymorphism and duck typing
   supra = Supra.new
   mustang = Mustang.new
   
-  puts supra.rev 
-  puts mustang.rev
+  puts rev_sound(supra)      
+  puts rev_sound(mustang)
