@@ -1,19 +1,21 @@
 class Abstraction  
-      
-    public 
-  
+    public
+    
     def publicMethod  
-        puts "In Public!" 
-        privateMethod
+      puts "Kumain ka na ba " + firstWife + "?"
+      puts "Kumain ka na ba " + secondWife + "?"
     end
       
     private  
-  
-    def privateMethod  
-        puts "In Private!"
+    
+    def firstWife  
+      "Angela"
     end
-end
+
+    def secondWife  
+        "Xenna"
+      end
+  end
   
-obj = Abstraction.new
-   
-obj.publicMethod 
+  obj = Abstraction.new
+  obj.publicMethod
